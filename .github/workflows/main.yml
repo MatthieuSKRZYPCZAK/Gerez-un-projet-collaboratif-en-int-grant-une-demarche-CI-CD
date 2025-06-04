@@ -17,8 +17,12 @@ jobs:
     needs: [backtest, fronttest]
     if: ${{ success() }}
     uses: ./.github/workflows/back-sonarqube.yml
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   frontsonar:
     needs: [backtest, fronttest]
     if: ${{ success() }}
     uses: ./.github/workflows/front-sonarqube.yml
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}

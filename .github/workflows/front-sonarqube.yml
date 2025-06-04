@@ -1,5 +1,8 @@
 on:
   workflow_call:
+    secrets:
+      SONAR_TOKEN:
+        required: true
 
 name: Sonar FrontEnd CI/CD
 run-name: Sonar Frontend - "${{ github.event.head_commit.message }} - ${{ github.actor }}"
@@ -18,5 +21,5 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v5
         with:
           projectBaseDir: front
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+#        env:
+#          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
