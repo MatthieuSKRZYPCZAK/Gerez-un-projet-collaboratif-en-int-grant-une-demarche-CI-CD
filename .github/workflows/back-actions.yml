@@ -31,3 +31,12 @@ jobs:
         with:
           name: jacoco-report
           path: back/target/site/jacoco
+
+      - name: Test Report
+        uses: phoenix-actions/test-reporting@v8
+        id: test-report               # Set ID reference for step
+        if: success() || failure()    # run this step even if previous step failed
+        with:
+          name: Back Tests            # Name of the check run which will be created
+          path: back/target/surefire-reports/*.xml
+          reporter: java-junit        # Format of test results
