@@ -9,8 +9,8 @@ on:
          - main
 jobs:
   run-tests:
-    runs-on: ubuntu-latest
-    steps:
+      runs-on: ubuntu-latest
+      steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 11 for x64
 
@@ -20,19 +20,19 @@ jobs:
           distribution: 'temurin'
           architecture: x64
 
-     - name: Run tests with Maven
-         run: mvn clean test
+      - name: Run tests with Maven
+        run: mvn clean test
 
-     - name: Generate JaCoCo report
+      - name: Generate JaCoCo report
         run: mvn jacoco:report
 
-     - name: Upload JaCoCo coverage report
-         uses: actions/upload-artifact@v3
-         with:
+      - name: Upload JaCoCo coverage report
+        uses: actions/upload-artifact@v3
+        with:
            name: jacoco-report
            path: back/target/site/jacoco
 
 
 
-       
-      
+
+
