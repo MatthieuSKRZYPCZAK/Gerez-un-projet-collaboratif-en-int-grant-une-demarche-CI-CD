@@ -1,0 +1,22 @@
+name: Sonar FrontEnd CI/CD
+run-name: Sonar Frontend - "${{ github.event.head_commit.message }} - ${{ github.actor }}"
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  sonarqube:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v5
+        with:
+          projectBaseDir: front
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
