@@ -26,9 +26,6 @@ jobs:
       - name: Run tests with Maven
         run: mvn clean test
 
-      - name: Generate JaCoCo report
-        run: mvn jacoco:report
-
       - name: Upload Jacoco Report
         uses: actions/upload-artifact@v4
         with:
