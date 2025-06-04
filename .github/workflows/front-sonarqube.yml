@@ -1,15 +1,15 @@
+on:
+  workflow_call:
+
 name: Sonar FrontEnd CI/CD
 run-name: Sonar Frontend - "${{ github.event.head_commit.message }} - ${{ github.actor }}"
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+
 jobs:
   sonarqube:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: front
     steps:
       - uses: actions/checkout@v4
         with:
