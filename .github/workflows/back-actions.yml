@@ -1,5 +1,5 @@
 name: Test BackEnd CI/CD
-run-name: ${{ github.actor }} 
+
 on:
   push:
       branches:
