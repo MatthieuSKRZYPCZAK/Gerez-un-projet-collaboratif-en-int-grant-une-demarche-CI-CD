@@ -21,5 +21,9 @@ jobs:
         uses: SonarSource/sonarqube-scan-action@v5
         with:
           projectBaseDir: front
+          args: >
+            -Dsonar.projectKey=matthieuskrzypczak_bobapp-front
+            -Dsonar.organization=matthieuskrzypczak
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
