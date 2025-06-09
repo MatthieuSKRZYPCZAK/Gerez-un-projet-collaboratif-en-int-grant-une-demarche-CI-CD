@@ -1,14 +1,19 @@
-on:
-  workflow_call:
-
-
 name: Sonar FrontEnd CI/CD
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
 run-name: Sonar Frontend - "${{ github.event.head_commit.message }} - ${{ github.actor }}"
 
 jobs:
-  sonarqube:
-    name: SonarQube
+  build:
+    name: Build and analyze frontend
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: front
     steps:
       - uses: actions/checkout@v4
         with:

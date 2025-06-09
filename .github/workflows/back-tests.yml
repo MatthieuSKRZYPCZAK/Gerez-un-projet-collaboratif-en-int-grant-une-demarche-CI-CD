@@ -1,9 +1,11 @@
-on:
-  workflow_call:
-
-
 name: Test BackEnd CI/CD
 run-name: Test Backend - "${{ github.event.head_commit.message }} - ${{ github.actor }}"
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   run-tests:
