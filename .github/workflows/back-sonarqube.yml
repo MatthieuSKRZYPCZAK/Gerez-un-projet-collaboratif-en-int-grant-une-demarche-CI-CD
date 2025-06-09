@@ -1,12 +1,9 @@
-on:
-  workflow_call:
-
 name: Sonar BackEnd CI/CD
-#on:
-#  push:
-#    branches: [main]
-#  pull_request:
-#    branches: [main]
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
 
 run-name: Sonar Backend - "${{ github.event.head_commit.message }} - ${{ github.actor }}"
 
