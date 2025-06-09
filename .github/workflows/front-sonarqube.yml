@@ -1,5 +1,8 @@
 on:
   workflow_call:
+    secrets:
+      SONAR_TOKEN:
+        required: true
 
 name: Sonar FrontEnd CI/CD
 #on:
