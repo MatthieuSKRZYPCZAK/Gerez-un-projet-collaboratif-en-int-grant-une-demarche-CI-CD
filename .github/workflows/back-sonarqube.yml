@@ -1,8 +1,5 @@
 on:
   workflow_call:
-    secrets:
-      SONAR_TOKEN:
-        required: true
 
 name: Sonar BackEnd CI/CD
 jobs:
