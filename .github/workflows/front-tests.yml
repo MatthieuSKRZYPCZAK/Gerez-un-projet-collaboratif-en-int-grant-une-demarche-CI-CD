@@ -1,11 +1,14 @@
+on:
+  workflow_call:
+
 name: Test FrontEnd CI/CD
 run-name: Test Frontend - "${{ github.event.head_commit.message }} - ${{ github.actor }}"
 
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+#on:
+#  push:
+#    branches: [main]
+#  pull_request:
+#    branches: [main]
 
 jobs:
   run-tests:

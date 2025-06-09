@@ -1,0 +1,24 @@
+name: CI/CD Orchestration
+  Add commentMore actions
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  backtest:
+    uses: ./.github/workflows/back-tests.yml
+
+  fronttest:
+    uses: ./.github/workflows/front-tests.yml
+
+  backsonar:
+    needs: [backtest, fronttest]
+    if: ${{ success() }}
+    uses: ./.github/workflows/back-sonarqube.yml
+
+  frontsonar:
+    needs: [backtest, fronttest]
+    if: ${{ success() }}
+    uses: ./.github/workflows/front-sonarqube.yml
