@@ -1,7 +1,7 @@
 on:
   workflow_call:
     secrets:
-      SONAR_TOKEN:
+      token:
         required: true
 
 name: Sonar FrontEnd CI/CD
@@ -9,21 +9,14 @@ run-name: Sonar Frontend - "${{ github.event.head_commit.message }} - ${{ github
 
 jobs:
   sonarqube:
+    name: SonarQube
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: front
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5
-        with:
-          projectBaseDir: front
-          args: >
-            -Dsonar.projectKey=matthieuskrzypczak_bobapp-front
-            -Dsonar.organization=matthieuskrzypczak
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
