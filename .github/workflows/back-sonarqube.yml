@@ -5,11 +5,6 @@ on:
         required: true
 
 name: Sonar BackEnd CI/CD
-#on:
-#  push:
-#    branches: [main]
-#  pull_request:
-#    branches: [main]
 
 run-name: Sonar Backend - "${{ github.event.head_commit.message }} - ${{ github.actor }}"
 

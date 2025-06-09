@@ -24,3 +24,11 @@ jobs:
     uses: ./.github/workflows/front-sonarqube.yml
     secrets:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+  docker-deploy:
+    name: Docker Build & Push
+    needs: [sonar-back, sonar-front]
+    uses: ./.github/workflows/docker.yml
+    secrets:
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_PASSWORD: $${{ secrets.DOCKER_PASSWORD }}
