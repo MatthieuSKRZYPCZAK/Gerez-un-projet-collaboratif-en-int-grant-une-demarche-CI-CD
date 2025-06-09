@@ -1,0 +1,26 @@
+name: CI/CD Main Controller
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test-back:
+    uses: ./.github/workflows/back-tests.yml
+
+  test-front:
+    uses: ./.github/workflows/front-tests.yml
+
+  sonar-back:
+    needs: test-back
+    uses: ./.github/workflows/back-sonarqube.yml
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+  sonar-front:
+    needs: test-front
+    uses: ./.github/workflows/front-sonarqube.yml
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
