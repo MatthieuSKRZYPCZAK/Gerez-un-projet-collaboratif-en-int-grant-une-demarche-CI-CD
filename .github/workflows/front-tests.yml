@@ -1,8 +1,5 @@
 on:
   workflow_call:
-    secrets:
-      SONAR_TOKEN:
-        required: true
 
 name: Test FrontEnd CI/CD
 run-name: Test Frontend - "${{ github.event.head_commit.message }} - ${{ github.actor }}"
@@ -30,10 +27,3 @@ jobs:
           with:
             name: angular-coverage
             path: front/coverage
-
-        - name: SonarQube Scan
-          uses: SonarSource/sonarqube-scan-action@v5
-          with:
-            projectBaseDir: front
-          env:
-            SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
