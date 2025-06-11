@@ -24,7 +24,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: angular-coverage
-          path: front/coverage
+          path: coverage
 
       - name: SonarQube Scan
         uses: SonarSource/sonarqube-scan-action@v5
