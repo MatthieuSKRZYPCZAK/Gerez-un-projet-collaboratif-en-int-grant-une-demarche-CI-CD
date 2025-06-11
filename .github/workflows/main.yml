@@ -12,6 +12,8 @@ jobs:
 
   test-front:
     uses: ./.github/workflows/front-tests.yml
+    secrets:
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
   sonar-back:
     needs: test-back
@@ -28,7 +30,7 @@ jobs:
   docker-deploy:
     name: Docker Build & Push
 #    needs: [sonar-back, sonar-front]
-    needs: sonar-back
+    needs: [sonar-back, test-front]
     uses: ./.github/workflows/docker.yml
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
