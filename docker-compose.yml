@@ -9,6 +9,6 @@ services:
     image: matthieuskr/bobapp-front:latest
     container_name: bobapp-front
     ports:
-      - "80:80"
+      - "4200:80"
     depends_on:
       - back
