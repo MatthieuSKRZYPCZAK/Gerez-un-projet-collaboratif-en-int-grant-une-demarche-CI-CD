@@ -3,8 +3,8 @@ services:
   back:
     image: matthieuskr/bobapp-back
     container_name: bobapp-back
-    expose:
-      - "8080"
+    ports:
+      - "8080:8080"
 
   front:
     image: matthieuskr/bobapp-front
