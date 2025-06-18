@@ -2,6 +2,21 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
+
+## Qualité du code
+
+Back
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=matthieuskrzypczak_bobapp-back&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=matthieuskrzypczak_bobapp-back)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=matthieuskrzypczak_bobapp-back&metric=coverage)](https://sonarcloud.io/summary/new_code?id=matthieuskrzypczak_bobapp-back)
+
+Front
+
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=matthieuskrzypczak_bobapp-front&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=matthieuskrzypczak_bobapp-front)
+[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=matthieuskrzypczak_bobapp-front&metric=coverage)](https://sonarcloud.io/summary/new_code?id=matthieuskrzypczak_bobapp-front)
+
+Vous pouvez consulter le rapport détaillé de la qualité de code sur [SonarCloud](https://sonarcloud.io/organizations/matthieuskrzypczak/projects).
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
