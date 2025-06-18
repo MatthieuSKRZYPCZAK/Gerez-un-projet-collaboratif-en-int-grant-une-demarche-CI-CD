@@ -1,5 +1,3 @@
-name: Docker Deploy
-
 on:
   workflow_call:
     secrets:

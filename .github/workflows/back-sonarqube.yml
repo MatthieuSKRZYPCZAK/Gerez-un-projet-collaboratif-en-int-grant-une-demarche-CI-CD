@@ -4,10 +4,6 @@ on:
       SONAR_TOKEN:
         required: true
 
-name: Sonar BackEnd CI/CD
-
-run-name: Sonar Backend - "${{ github.event.head_commit.message }} - ${{ github.actor }}"
-
 jobs:
   build:
     name: Build and analyze backend
