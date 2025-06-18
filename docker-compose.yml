@@ -35,19 +35,6 @@ services:
     networks:
       - mynetworks
 
-  nginx:
-    image: nginx:alpine
-    container_name: mon-nginx
-    depends_on:
-      - front
-      - back
-    volumes:
-      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
-    ports:
-      - "80:80"
-    networks:
-      - mynetworks
-
 networks:
   mynetworks:
     driver: bridge
