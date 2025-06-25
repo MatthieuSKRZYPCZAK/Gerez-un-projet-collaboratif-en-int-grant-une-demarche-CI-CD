@@ -6,8 +6,8 @@ Bienvenue / Welcome! 👋
 
 Veuillez choisir votre langue / Please choose your language:
 
-🇫🇷 [Lire en français](#bobapp---automatisation-cicd)  
-🇬🇧 [Read in English](#bobapp---cicd-automation)
+🇫🇷 [Lire en français](#rapports-de-qualité-sonarcloud)  
+🇬🇧 [Read in English](#quality-reports-sonarcloud)
 
 ## Rapports de Qualité (SonarCloud)
 
