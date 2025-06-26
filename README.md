@@ -39,7 +39,7 @@ Bienvenue sur **BobApp**, une application full-stack dévelopéée avec Spring B
 ### Cloner le projet
 
 ```bash
-      git clone https://github.com/MatthieuSKRZYPCZAK/Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD.git
+      git clone https://github.com/MatthieuSKRZYPCZAK/P10_BobApp.git
 ```
 
 ### Back-end
@@ -161,7 +161,7 @@ Welcome to **BobApp**, a full-stack application built with Spring Boot (Java) fo
 ### Clone the repository
 
 ```bash
-      git clone https://github.com/MatthieuSKRZYPCZAK/Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD.git
+      git clone https://github.com/MatthieuSKRZYPCZAK/P10_BobApp.git
 ```
 
 ### Back-end
