@@ -39,23 +39,23 @@ Bienvenue sur **BobApp**, une application full-stack dévelopéée avec Spring B
 ### Cloner le projet
 
 ```bash
-      git clone https://github.com/MatthieuSKRZYPCZAK/P10_BobApp.git
+git clone https://github.com/MatthieuSKRZYPCZAK/P10_BobApp.git
 ```
 
 ### Back-end
 
 ```bash
-    cd back
-    mvn clean install
-    mvn spring-boot:run
+cd back
+mvn clean install
+mvn spring-boot:run
 ```
 
 ### Front-end
 
 ```bash
-    cd front
-    npm install
-    npm run start
+cd front
+npm install
+npm run start
 ```
 
 ## 🐳 Docker
@@ -67,31 +67,31 @@ Pour permettre la communication entre le front et le back, les deux conteneurs d
 #### Créer un réseau Docker
 
 ```bash
-    docker network create bobapp-net 
+docker network create bobapp-net 
 ```
 
 #### Back-end
 
 1. Construire l'image
 ```bash
-    docker build -t bobapp-back .
+docker build -t bobapp-back .
 ```
 
 2. Lancer le back
 ```bash
-    docker run --network bobapp-net --name back -d bobapp-back
+docker run --network bobapp-net --name back -d bobapp-back
 ```
 
 #### Front-end
 
 1. Construire l'image
 ```bash
-    docker build -t bobapp-front .
+docker build -t bobapp-front .
 ```
 2. Lancer le front sur le même réseau
 
 ```bash
-    docker run --network bobapp-net -p 4200:80 --name bobapp-front -d bobapp-front
+docker run --network bobapp-net -p 4200:80 --name bobapp-front -d bobapp-front
 ```
 
 ### Option 2 : Utiliser Docker compose (recommandé)
@@ -101,12 +101,12 @@ Assurez-vous d'être à la **racine du projet**, là où se trouve le fichier `d
 Lancer les conteneurs avec :
 
 ```bash
-    docker-compose up -d
+docker-compose up -d
 ```
 
 Pour arrêter :
 ```bash
-    docker-compose down
+docker-compose down
 ```
 
 ## 🔄 Pipeline CI/CD
@@ -161,23 +161,23 @@ Welcome to **BobApp**, a full-stack application built with Spring Boot (Java) fo
 ### Clone the repository
 
 ```bash
-      git clone https://github.com/MatthieuSKRZYPCZAK/P10_BobApp.git
+git clone https://github.com/MatthieuSKRZYPCZAK/P10_BobApp.git
 ```
 
 ### Back-end
 
 ```bash
-    cd back
-    mvn clean install
-    mvn spring-boot:run
+cd back
+mvn clean install
+mvn spring-boot:run
 ```
 
 ### Front-end
 
 ```bash
-    cd front
-    npm install
-    npm run start
+cd front
+npm install
+npm run start
 ```
 
 ## 🐳 Docker
@@ -189,31 +189,31 @@ To allow communication between the frontend and backend, both containers must be
 #### Create a Docker network
 
 ```bash
-    docker network create bobapp-net 
+docker network create bobapp-net 
 ```
 
 #### Back-end
 
 1. Build the image
 ```bash
-    docker build -t bobapp-back .
+docker build -t bobapp-back .
 ```
 
 2. Run the backend container
 ```bash
-    docker run --network bobapp-net --name back -d bobapp-back
+docker run --network bobapp-net --name back -d bobapp-back
 ```
 
 #### Front-end
 
 1. Build the image
 ```bash
-    docker build -t bobapp-front .
+docker build -t bobapp-front .
 ```
 2. Run the frontend container on the same network
 
 ```bash
-    docker run --network bobapp-net -p 4200:80 --name bobapp-front -d bobapp-front
+docker run --network bobapp-net -p 4200:80 --name bobapp-front -d bobapp-front
 ```
 
 ### Option 2 : Use Docker Compose (recommended)
@@ -223,12 +223,12 @@ Make sure you're at the **root of the project**, where the `docker-compose.yml` 
 Launch the containers with :
 
 ```bash
-    docker-compose up -d
+docker-compose up -d
 ```
 
 To stop them :
 ```bash
-    docker-compose down
+docker-compose down
 ```
 
 ## 🔄 CI/CD Pipeline
