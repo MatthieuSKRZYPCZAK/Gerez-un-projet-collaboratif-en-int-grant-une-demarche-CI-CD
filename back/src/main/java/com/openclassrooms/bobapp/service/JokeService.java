@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.openclassrooms.bobapp.data.JsonReader;
 import com.openclassrooms.bobapp.model.Joke;
-// Test CI/CD
+
 @Service
 public class JokeService {
     
