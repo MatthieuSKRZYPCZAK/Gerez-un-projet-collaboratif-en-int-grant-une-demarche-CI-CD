@@ -28,6 +28,7 @@ jobs:
   docker-deploy:
     name: Docker Build & Push
     needs: [sonar-back, sonar-front]
+    if: github.event_name == 'push'
     uses: ./.github/workflows/docker.yml
     secrets:
       DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
