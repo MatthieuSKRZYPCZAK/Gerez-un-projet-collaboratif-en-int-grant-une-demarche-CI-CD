@@ -39,5 +39,4 @@ jobs:
          mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
           -Dsonar.projectKey=matthieuskrzypczak_bobapp-back \
           -Dsonar.organization=matthieuskrzypczak \
-          -Dsonar.host.url=https://sonarcloud.io \
-          -Dsonar.token=${{ secrets.SONAR_TOKEN }}
+          -Dsonar.host.url=https://sonarcloud.io
