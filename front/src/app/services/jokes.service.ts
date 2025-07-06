@@ -8,7 +8,7 @@ import { Joke } from '../model/joke.model';
 })
 export class JokesService {
 
-  // Test
+  // Test BobApp Présentation
   private pathService = 'api/joke';
 
   private subject: BehaviorSubject<Joke | null> = new BehaviorSubject<Joke | null>(null);
